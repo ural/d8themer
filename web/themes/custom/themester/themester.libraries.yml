@@ -6,6 +6,14 @@ global-css:
       css/layout.css: {}
       css/print.css: { media: print }
       css/styles.css: {}
+  js:
+      js/scripts.js: {}
+      js/emoji.js: {}
+
+    dependencies:
+      - core/jquery
+      - core/modernizr
+      - core/drupalSettings
 
 roboto:
   license:
@@ -14,4 +22,3 @@ roboto:
   css:
     theme:
       //fonts.googleapis.com/css?family=Roboto: { type: external }
-      css/styles.css: {}
