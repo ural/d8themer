@@ -9,10 +9,10 @@ global-css:
   js:
       js/scripts.js: {}
 
-    dependencies:
-      - core/jquery
-      - core/modernizr
-      - core/drupalSettings
+  dependencies:
+    - core/jquery
+    - core/modernizr
+    - core/drupalSettings
 
 roboto:
   license:
