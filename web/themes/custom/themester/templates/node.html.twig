@@ -74,8 +74,6 @@
 #}
 <article{{ attributes }}>
 
-  {{ kint() }}
-
   {{ title_prefix }}
   {% if not page %}
     <h2{{ title_attributes }}>
@@ -83,7 +81,7 @@
     </h2>
   {% endif %}
   {{ title_suffix }}
-
+  
   {% if display_submitted %}
     <footer>
       {{ author_picture }}
