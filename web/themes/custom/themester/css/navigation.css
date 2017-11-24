@@ -1,0 +1,31 @@
+/* Navigation */
+
+#themester-menu ul {
+  background-color: #72c8de;
+  height: 30px;
+  padding-left: 0;
+  text-decoration: none;
+}
+#themester-menu li {
+  display: inline;
+  list-style: none outside none;
+  list-style-type: none;
+  padding: 0 0.5em;
+}
+#themester-menu li a {
+  background-color: #72c8de;
+  border-right: 1px solid #ffffff;
+  color: #ffffff;
+  display: block;
+  float: left;
+  padding: 5px 0;
+  text-align: center;
+  width: 150px;
+  text-decoration: none;
+}
+#themester-menu li a:hover, #themester-menu li.active-trail a, #themester-menu li a.active {
+  background-color: #4e8fac;
+  color: #ffffff;
+  font-size: bigger;
+  text-decoration: none;
+}
