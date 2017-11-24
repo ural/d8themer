@@ -90,8 +90,14 @@
     </footer>
   {% endif %}
 
-  <div{{ content_attributes }}>
-    {{ content }}
+  <div{{ content_attributes }} class="clearfix">
+    {#{{ content }}#}
+    <div class="article-img">
+      {{ content.field_image }}
+    </div>
+    <div class="article-body">
+      {{ content.body }}
+    </div>
   </div>
 
 </article>
