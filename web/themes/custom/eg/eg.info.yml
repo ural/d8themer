@@ -1,0 +1,6 @@
+name: Elegant Gardens
+type: theme
+description: Garden Theme
+core: 8.x
+base theme: classy
+screenshot: emily-didonato-2016.jpg
