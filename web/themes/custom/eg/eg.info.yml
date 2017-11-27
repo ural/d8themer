@@ -4,3 +4,20 @@ description: Garden Theme
 core: 8.x
 base theme: classy
 screenshot: emily-didonato-2016.jpg
+
+libraries:
+ - eg/eg-css
+ - eg/quicksand
+
+regions:
+  header: Header
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  page_top: Page Top
+  page_buttom: Page Buttom
+  sidebar_first: Left Sidebar
+  sidebar_second: Right Sidebar
+  front: Front Page Blocks
+  footer: Footer
+  second_footer: Second Footer
