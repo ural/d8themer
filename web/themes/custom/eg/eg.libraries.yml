@@ -1,12 +1,15 @@
 eg-css:
-  version: VERSION
+  version: 1.0
   css:
     base:
-      css/base/styles.css {}
-    components:
-      css/components/components.css {}
-
-
+      css/base/styles.css: {}
+    layout:
+      css/layout/layout.css: {}
+      # css/layout/responsive.css: {}
+    component:
+      css/components/menu.css: {}
+      css/components/button.css: {}
+      css/components/views.css: {}
 quicksand:
   license:
     name: SIL Open Font License 1.1
