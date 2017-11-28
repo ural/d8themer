@@ -3,6 +3,8 @@ eg-css:
   css:
     base:
       css/base/styles.css {}
+    components:
+      css/components/components.css {}
 
 
 quicksand:

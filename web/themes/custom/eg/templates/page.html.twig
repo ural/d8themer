@@ -52,13 +52,6 @@
   {{ page.primary_menu }}
   {{ page.secondary_menu }}
 #}
-
-  {% if page.front %}
-    <div class="front content">
-      {{ page.front }}
-    </div>
-  {% endif %}
-
   {{ page.breadcrumb }}
 
   {{ page.highlighted }}
@@ -84,12 +77,23 @@
       </aside>
     {% endif %}
 
+    {% if page.front %}
+      <div class="front content">
+        {{ page.front }}
+      </div>
+    {% endif %}
+
   </main>
 
   {% if page.footer %}
     <footer role="contentinfo">
       {{ page.footer }}
     </footer>
+  {% endif %}
+  {% if page.second_footer %}
+    <div class="second-footer" role="contentinfo">
+      {{ page.second_footer }}
+    </div>
   {% endif %}
 
 </div>{# /.layout-container #}

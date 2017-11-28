@@ -6,7 +6,8 @@
 body {
   font-family: Quicksand, sans-serif;
   color: #666;
-  background: #eaeaea url(../../images/body_bg.png);
+  /*background: #eaeaea url(../../images/body_bg.png);*/
+  background: #dfdfdf;
 }
 
 h1, h2, h3, h4 {font-family: 'Quicksand', sans-serif;}
@@ -41,4 +42,9 @@ blockquote {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
   margin: 10px 0;
+}
+
+.site-logo img {
+  width: 100px;
+  height: auto;
 }
