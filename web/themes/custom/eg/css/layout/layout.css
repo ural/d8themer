@@ -41,6 +41,11 @@
 .path-blog .field-content img{
   height: 150px;
 }
+/*                      MAIN                        */
+main {
+  height: 500px;
+}
+
 /* ------------------ Sidebar ----------------- */
 
 .region-sidebar-second {
