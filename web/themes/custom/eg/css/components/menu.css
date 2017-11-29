@@ -4,20 +4,20 @@ Main Menu
 */
 
 .banner{
-  padding: 0px;
+  padding: 0;
 }
 
 .block ul{
-  width: 65%;
+  width: 90%;
 }
 .block ul li{
-  padding: 0px;
+  padding: 0;
  
 }
 .menu {
 		float: right;
 		border-bottom: 2px solid #000;
-    margin: 0px;
+    margin: 0;
 }
 
 .menu:before,
@@ -81,7 +81,7 @@ ul.menu a.is-active{
 .menu li:hover > ol {
   opacity: 1;
   visibility: visible;
-  margin: 0px;
+  margin: 0;
 }
 
 .menu ul ul {
