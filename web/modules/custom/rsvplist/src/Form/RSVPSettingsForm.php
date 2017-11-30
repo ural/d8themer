@@ -11,44 +11,42 @@ use Symfony\Component\HttpFoundation\Request;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Defines a form to configure RSVP LIst module settings
+ * Defines a form to configure RSVP List module settings
  */
-
 class RSVPSettingsForm extends ConfigFormBase {
   /**
-   * {@inheritcoc}
+   * {@inheritdoc}
    */
-  public function getFormId() {
+  public function getFormID() {
     return 'rsvplist_admin_settings';
   }
   /**
-   * {@inheritcoc}
+   * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
     return [
       'rsvplist.settings'
     ];
   }
-
   /**
-   * {@inheritcoc}
+   * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state, Request $request = NULL) {
-
     $types = node_type_get_names();
     $config = $this->config('rsvplist.settings');
     $form['rsvplist_types'] = array(
       '#type' => 'checkboxes',
-      '#title' => $this->t('The content types to enable RSVP collection for.'),
+      '#title' => $this->t('The content types to enable RSVP collection for'),
       '#default_value' => $config->get('allowed_types'),
       '#options' => $types,
       '#description' => t('On the specified node types, an RSVP option will be available and can be enabled while tht node is being edited.'),
     );
     $form['array_filter'] = array('#type' => 'value', '#value' => TRUE);
-    return parent::buildForm($form, $form_state);
+
+    return parent::buildForm($form,$form_state);
   }
   /**
-   * {@inheritcoc}
+   * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $allowed_types = array_filter($form_state->getValue('rsvplist_types'));
