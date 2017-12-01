@@ -26,6 +26,13 @@ function rsvplist_schema() {
         'not null' => FALSE,
         'default' => 0,
       ),
+      'title' => [
+        'description' => 'The node title.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ],
       'mail' => array(
         'description' => 'User\'s email address.',
         'type' => 'varchar',
