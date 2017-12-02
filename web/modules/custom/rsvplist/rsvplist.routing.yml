@@ -12,4 +12,4 @@ rsvplist.report:
     _controller: '\Drupal\rsvplist\Controller\ReportController::report'
     _title: 'List of RSVPs'
   requirements:
-    _permission: 'view rsvplist'
+    _permission: 'admin rsvplist'
