@@ -1,0 +1,4 @@
+service:
+  rsvplist.enabler:
+    class: Drupal\rsvplist\EnablerService
+    argumnets: []
