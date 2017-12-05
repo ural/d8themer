@@ -19,11 +19,12 @@ class EnablerService {
   public function __construct() {
 
   }
-
   /**
    * Sets a individual node to be RSVP enabled.
    *
    * @param \Drupal\node\Entity\Node $node
+   *
+   * @param $insert
    */
   public function setEnabled(Node $node) {
     if (!$this->isEnabled($node)) {
