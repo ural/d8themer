@@ -1,5 +1,26 @@
 <?php
 
 function eg_preprocess_block(&$variables) {
-  kint();
+
+//  if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id() ) {
+  //kint($variables);
+  //  }
 }
+
+/*function eg_preprocess_node(&$variables) {
+    if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id() ) {
+      $variables['label']['#suffix'] = '<em>[ you ARE the author ]</em>';
+    }
+
+}*/
+
+/*function icecream_preprocess_node(&$variables) {
+  // If the curret user is logged in, and they are the owner of the node
+  // being viewed, add a new variable that can be used to identify this in
+  // Twig templates.
+  $variables['current_user_is_owner'] = FALSE;
+  if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id()) {
+    $variables['current_user_is_owner'] = TRUE;
+  }
+  kint($variables);
+}*/
