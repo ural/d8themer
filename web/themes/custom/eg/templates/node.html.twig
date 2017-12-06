@@ -75,11 +75,14 @@
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
     'clearfix',
+    current_user_is_owner ? 'the-USER-IS-OWNER',
   ]
 %}
 {{ attach_library('classy/node') }}
 
-{{ dump(_context|keys) }}
+<h1>
+  {{ current_user_is_owner }}
+</h1>
 
 <article{{ attributes.addClass(classes) }}>
   <header>

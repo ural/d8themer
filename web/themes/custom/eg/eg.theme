@@ -14,7 +14,7 @@ function eg_preprocess_block(&$variables) {
 
 }*/
 
-/*function icecream_preprocess_node(&$variables) {
+function eg_preprocess_node(&$variables) {
   // If the curret user is logged in, and they are the owner of the node
   // being viewed, add a new variable that can be used to identify this in
   // Twig templates.
@@ -22,5 +22,4 @@ function eg_preprocess_block(&$variables) {
   if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id()) {
     $variables['current_user_is_owner'] = TRUE;
   }
-  kint($variables);
-}*/
+}
