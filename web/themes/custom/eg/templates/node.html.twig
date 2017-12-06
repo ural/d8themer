@@ -80,11 +80,11 @@
   ]
 %}
 {{ attach_library('classy/node') }}
-
+{% if current_user_is_owner %}
 <h1>
-  {{ current_user_is_owner }}
+  the-USER-IS-OWNER
 </h1>
-
+{% endif %}
 <article{{ attributes.addClass(classes) }}>
   <header>
     {{ title_prefix }}
