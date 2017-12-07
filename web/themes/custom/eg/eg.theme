@@ -1,18 +1,15 @@
 <?php
 
+function eg_preprocess_page(&$variables) {
+  kint($variables);
+}
+
 function eg_preprocess_block(&$variables) {
 
 //  if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id() ) {
   //kint($variables);
   //  }
 }
-
-/*function eg_preprocess_node(&$variables) {
-    if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id() ) {
-      $variables['label']['#suffix'] = '<em>[ you ARE the author ]</em>';
-    }
-
-}*/
 
 function eg_preprocess_node(&$variables) {
   // If the curret user is logged in, and they are the owner of the node

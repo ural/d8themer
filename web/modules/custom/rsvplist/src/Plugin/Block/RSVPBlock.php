@@ -20,6 +20,8 @@ use Drupal\Core\Access\AccessResult;
 class RSVPBlock extends BlockBase {
 /**
  * {@inheritdoc}
+ *
+ * @property integer $nid
  */
   public function build() {
     return \Drupal::formBuilder()->getForm('Drupal\rsvplist\Form\RSVPForm');
