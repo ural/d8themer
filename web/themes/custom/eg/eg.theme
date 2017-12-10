@@ -1,5 +1,9 @@
 <?php
 
+function eg_preprocess_html(&$variables) {
+  //kint($variables);
+}
+
 function eg_preprocess_page(&$variables) {
   //kint($variables);
 }
