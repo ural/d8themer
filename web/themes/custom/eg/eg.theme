@@ -1,7 +1,7 @@
 <?php
 
 function eg_preprocess_page(&$variables) {
-  kint($variables);
+  //kint($variables);
 }
 
 function eg_preprocess_block(&$variables) {
@@ -18,5 +18,15 @@ function eg_preprocess_node(&$variables) {
   $variables['current_user_is_owner'] = FALSE;
   if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id()) {
     $variables['current_user_is_owner'] = TRUE;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function eg_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $logged_in = \Drupal::currentUser()->isAuthenticated();
+  if (!$logged_in) {
+    $suggestions[] = 'page__' . 'not_authenticated';
   }
 }
