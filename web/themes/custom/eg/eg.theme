@@ -30,7 +30,7 @@ function eg_preprocess_node(&$variables) {
  */
 function eg_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   $logged_in = \Drupal::currentUser()->isAuthenticated();
-  if (!$logged_in) {
+  if (!$logged_in && !$variables['is_front'] == TRUE) {
     $suggestions[] = 'page__' . 'not_authenticated';
   }
 }
