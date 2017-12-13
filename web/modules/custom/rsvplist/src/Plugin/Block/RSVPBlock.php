@@ -21,7 +21,7 @@ class RSVPBlock extends BlockBase {
 /**
  * {@inheritdoc}
  *
- * @property integer $nid
+ * @param integer $nid
  */
   public function build() {
     return \Drupal::formBuilder()->getForm('Drupal\rsvplist\Form\RSVPForm');
