@@ -1,20 +1,36 @@
 <?php
 
+/**
+ * @file
+ */
+
+/**
+ *
+ */
 function eg_preprocess_html(&$variables) {
-  //kint($variables);
+  // kint($variables);
 }
 
+/**
+ *
+ */
 function eg_preprocess_page(&$variables) {
-  //kint($variables);
+  // kint($variables);
 }
 
+/**
+ *
+ */
 function eg_preprocess_block(&$variables) {
 
-//  if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id() ) {
-  //kint($variables);
+  // If ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id() ) {
+  // kint($variables);
   //  }
 }
 
+/**
+ *
+ */
 function eg_preprocess_node(&$variables) {
   // If the curret user is logged in, and they are the owner of the node
   // being viewed, add a new variable that can be used to identify this in
@@ -27,13 +43,14 @@ function eg_preprocess_node(&$variables) {
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
+ *
  * @param $suggestions
  *
  * @param $variables
  */
 function eg_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   $logged_in = \Drupal::currentUser()->isAuthenticated();
-  //if (!$logged_in && !$variables['is_front'] == TRUE) {
+  // If (!$logged_in && !$variables['is_front'] == TRUE) {.
   if (!$logged_in) {
     kint($variables);
     $suggestions[] = 'page__' . 'not_authenticated';

@@ -1,23 +1,21 @@
-
 /*
 Main Menu
 */
 
-.banner{
+.banner {
   padding: 0;
 }
 
-.block ul{
+.block ul {
   width: 90%;
 }
-.block ul li{
+.block ul li {
   padding: 0;
- 
 }
 .menu {
-		float: right;
-		border-bottom: 2px solid #000;
-    margin: 0;
+  float: right;
+  border-bottom: 2px solid #000;
+  margin: 0;
 }
 
 .menu:before,
@@ -30,8 +28,8 @@ Main Menu
   clear: both;
 }
 
-ul.menu a.is-active{
-  color: #90A860;
+ul.menu a.is-active {
+  color: #90a860;
 }
 
 .menu li {
@@ -39,19 +37,20 @@ ul.menu a.is-active{
   position: relative;
 }
 .menu li.active_menu_item > a {
-  color:#90A860; 
-  }
+  color: #90a860;
+}
 .menu a {
   float: left;
   padding: 40px 20px 30px;
   color: #000;
   text-transform: uppercase;
-	font-family: 'Quicksand', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
-.menu li:hover > a, .menu li.active_menu_item:hover > a{
-  color: #FFF;
-	background: #90A860;
+.menu li:hover > a,
+.menu li.active_menu_item:hover > a {
+  color: #fff;
+  background: #90a860;
 }
 
 *html .menu li a:hover { /* IE6 only */
@@ -63,7 +62,6 @@ ul.menu a.is-active{
   _margin: 0; /*IE6 only*/
   opacity: 0;
   visibility: hidden;
- 
   top: 70px;
   left: 0;
   z-index: 9999;
@@ -115,15 +113,15 @@ ul.menu a.is-active{
   width: 130px;
   _height: 10px; /*IE6 only*/
   display: block;
-	background: #FFF;
-	border: 0;
+  background: #fff;
+  border: 0;
   white-space: nowrap;
   float: none;
   text-transform: none;
 }
 
 .menu ul a:hover {
-  background-color: #90A860;
+  background-color: #90a860;
 }
 
 .menu ul li:first-child > a {
@@ -149,15 +147,15 @@ ul.menu a.is-active{
   border-left: 0;
   border-bottom: 6px solid transparent;
   border-top: 6px solid transparent;
-  border-right: 6px solid #90A860;
+  border-right: 6px solid #90a860;
 }
 
 .menu ul li:first-child a:hover:after {
-  border-bottom-color: #90A860;
+  border-bottom-color: #90a860;
 }
 
 .menu ul ul li:first-child a:hover:after {
-  border-right-color: #90A860;
+  border-right-color: #90a860;
   border-bottom-color: transparent;
 }
 
