@@ -45,6 +45,11 @@
 
 {{ kint() }}
 
+{#Create   Attributes#}
+<div {{ create_attribute({'class' : ['custom-attr', 'test-attr-div']}) }} {{ attributes.setAttribute('id', 'customID') }} >
+  Create Custom  Attributes
+</div>
+
 <div class="layout-container">
 
   <header role="banner">
