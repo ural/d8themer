@@ -2,7 +2,7 @@ name: Elegant Gardens
 type: theme
 description: Garden Theme
 core: 8.x
-version: 1.0.0
+version: 8.1.x
 base theme: classy
 screenshot: emily-didonato-2016.jpg
 
