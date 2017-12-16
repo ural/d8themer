@@ -7,7 +7,7 @@ base theme: classy
 screenshot: emily-didonato-2016.jpg
 
 libraries:
- - eg/eg-css
+ - eg/eg-assets
  - eg/quicksand
 
 regions:
