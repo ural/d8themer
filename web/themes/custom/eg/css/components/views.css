@@ -36,9 +36,12 @@
   color: #90a860;
 }
 
-
 .views-field-title h2 {
   background: #fcfcfc;
   padding-right: 10px;
   display: inline-block;
+}
+
+#block-views-block-banner-view-block-1 {
+  clear: both;
 }
