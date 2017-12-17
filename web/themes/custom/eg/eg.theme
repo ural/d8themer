@@ -44,7 +44,7 @@ function eg_preprocess_node(&$variables) {
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  *
- * @param $suggestions
+ * @param string $suggestions
  *
  * @param $variables
  */
@@ -52,7 +52,7 @@ function eg_theme_suggestions_page_alter(array &$suggestions, array $variables) 
   $logged_in = \Drupal::currentUser()->isAuthenticated();
   // If (!$logged_in && !$variables['is_front'] == TRUE) {.
   if (!$logged_in) {
-    kint($variables);
-    $suggestions[] = 'page__' . 'not_authenticated';
+    // kint($variables);
+    $suggestions[] = 'page__not_authenticated';
   }
 }
