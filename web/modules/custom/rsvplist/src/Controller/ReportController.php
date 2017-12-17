@@ -41,9 +41,9 @@ class ReportController extends ControllerBase {
       '#markup' => $this->t('Below is a list of all Event RSVPs including username, email address and the name of the event they will be attending.'),
     ];
     $headers = [
-      t('Name'),
-      t('Event'),
-      t('Email'),
+      $this->t('Name'),
+      $this->t('Event'),
+      $this->t('Email'),
     ];
     $rows = [];
     foreach ($entries = $this->load() as $entry) {
@@ -54,7 +54,7 @@ class ReportController extends ControllerBase {
       '#type' => 'table',
       '#header' => $headers,
       '#rows' => $rows,
-      '#empty' => t('No entries available.'),
+      '#empty' => $this->t('No entries available.'),
     ];
     // Don't cache this page.
     $content['#cache']['max-age'] = 0;

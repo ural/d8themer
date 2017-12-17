@@ -26,15 +26,15 @@ class RSVPForm extends FormBase {
     $node = \Drupal::routeMatch()->getParameter('node');
     $nid = $node->nid->value;
     $form['email'] = [
-      '#title' => t('Email address'),
+      '#title' => $this->t('Email address'),
       '#type' => 'textfield',
       '#size' => 25,
-      '#description' => t("We'll send updates to the email address you provide."),
+      '#description' => $this->t("We'll send updates to the email address you provide."),
       '#required' => TRUE,
     ];
     $form['submit'] = [
       '#type' => 'submit',
-      '#value' => t('RSVP'),
+      '#value' => $this->t('RSVP'),
     ];
     $form['nid'] = [
       '#type' => 'hidden',
@@ -49,7 +49,7 @@ class RSVPForm extends FormBase {
   public function validateForm(array &$form, FormStateInterface $form_state) {
     $value = $form_state->getValue('email');
     if ($value == !\Drupal::service('email.validator')->isValid($value)) {
-      $form_state->setErrorByName('email', t('The email address %mail is not valid.', ['%mail' => $value]));
+      $form_state->setErrorByName('email', $this->t('The email address %mail is not valid.', ['%mail' => $value]));
       return;
     }
     $node = \Drupal::routeMatch()->getParameter('node');
@@ -61,7 +61,7 @@ class RSVPForm extends FormBase {
     $results = $select->execute();
     if (!empty($results->fetchCol())) {
       // We found a row with this nid and email.
-      $form_state->setErrorByName('email', t('The address %mail is already subscribed to this list', ['%mail' => $value]));
+      $form_state->setErrorByName('email', $this->t('The address %mail is already subscribed to this list', ['%mail' => $value]));
     }
   }
 
@@ -80,7 +80,7 @@ class RSVPForm extends FormBase {
         'created' => time(),
       ])
       ->execute();
-    drupal_set_message(t('Thank you for your RSVP, you are on the list for the event.'));
+    drupal_set_message($this->t('Thank you for your RSVP, you are on the list for the event.'));
   }
 
 }
