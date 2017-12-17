@@ -1,10 +1,8 @@
 <?php
-/**
- * @file
- * Contains \Drupal\rsvplist\Form\RSVPForm
- */
+
 namespace Drupal\rsvplist\Form;
 
+use Drupal\user\Entity\User;
 use Drupal\Core\Database\Database;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -27,21 +25,21 @@ class RSVPForm extends FormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $node = \Drupal::routeMatch()->getParameter('node');
     $nid = $node->nid->value;
-    $form['email'] = array(
+    $form['email'] = [
       '#title' => t('Email address'),
       '#type' => 'textfield',
       '#size' => 25,
       '#description' => t("We'll send updates to the email address you provide."),
       '#required' => TRUE,
-    );
-    $form['submit'] = array(
+    ];
+    $form['submit'] = [
       '#type' => 'submit',
       '#value' => t('RSVP'),
-    );
-    $form['nid'] = array(
+    ];
+    $form['nid'] = [
       '#type' => 'hidden',
       '#value' => $nid,
-    );
+    ];
     return $form;
   }
 
@@ -55,15 +53,15 @@ class RSVPForm extends FormBase {
       return;
     }
     $node = \Drupal::routeMatch()->getParameter('node');
-    // Check if email already is set for this node
+    // Check if email already is set for this node.
     $select = Database::getConnection()->select('rsvplist', 'r');
-    $select->fields('r', array('nid'));
+    $select->fields('r', ['nid']);
     $select->condition('nid', $node->id());
     $select->condition('mail', $value);
     $results = $select->execute();
     if (!empty($results->fetchCol())) {
-      //We found a row with this nid and email.
-      $form_state->setErrorByName('email', t('The address %mail is already subscribed to this list', array('%mail' => $value)));
+      // We found a row with this nid and email.
+      $form_state->setErrorByName('email', t('The address %mail is already subscribed to this list', ['%mail' => $value]));
     }
   }
 
@@ -71,16 +69,16 @@ class RSVPForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+    $user = User::load(\Drupal::currentUser()->id());
     $conn = Database::getConnection();
-    //db_insert('rsvplist') <- deprecated use $conn = Database::getConnection(); instead
-      $conn->insert('rsvplist')
-      ->fields(array(
+    // db_insert('rsvplist') <- deprecated use $conn = Database::getConnection(); instead.
+    $conn->insert('rsvplist')
+      ->fields([
         'mail' => $form_state->getValue('email'),
         'nid' => $form_state->getValue('nid'),
         'uid' => $user->id(),
         'created' => time(),
-      ))
+      ])
       ->execute();
     drupal_set_message(t('Thank you for your RSVP, you are on the list for the event.'));
   }
