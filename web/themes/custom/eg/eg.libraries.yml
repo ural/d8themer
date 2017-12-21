@@ -10,8 +10,10 @@ eg-assets:
       css/components/menu.css: {}
       css/components/button.css: {}
       css/components/views.css: {}
+      css/components/search.css: {}
   js:
       js/scripts.js: {}
+      js/friendly-greeting.js: {}
 
 quicksand:
   license:

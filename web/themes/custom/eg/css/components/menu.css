@@ -14,7 +14,7 @@ Main Menu
 }
 .menu {
   float: right;
-  border-bottom: 2px solid #000;
+  /*border-bottom: 2px solid #000;*/
   margin: 0;
 }
 
@@ -41,7 +41,7 @@ ul.menu a.is-active {
 }
 .menu a {
   float: left;
-  padding: 40px 20px 30px;
+  padding: 10px;
   color: #000;
   text-transform: uppercase;
   font-family: 'Quicksand', sans-serif;
@@ -59,7 +59,6 @@ ul.menu a.is-active {
 
 .menu ul {
   margin: 20px 0 0 0;
-  _margin: 0; /*IE6 only*/
   opacity: 0;
   visibility: hidden;
   top: 70px;
@@ -69,11 +68,11 @@ ul.menu a.is-active {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -ms-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .menu li:hover > ol {
