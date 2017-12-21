@@ -65,7 +65,7 @@ function eg_page_attachments_alter(array &$page) {
   $account = \Drupal::currentUser();
   if ($account->isAuthenticated()) {
     // First we attach our asset library to the page.
-    $page['#attached']['library'][] = 'eg/friendly-greeting';
+    /*$page['#attached']['library'][] = 'eg/friendly-greeting';*/
     // Then we pass along our dynamic value.
     // This will then be available in our JavaScript as drupalSettings.friendly.name.
     $page['#attached']['drupalSettings']['friendly']['name'] = $account->getDisplayName();;
