@@ -56,3 +56,18 @@ function eg_theme_suggestions_page_alter(array &$suggestions, array $variables) 
     $suggestions[] = 'page__not_authenticated';
   }
 }
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function eg_page_attachments_alter(array &$page) {
+  // We're going to pass along the user's display name to our front-end code.
+  $account = \Drupal::currentUser();
+  if ($account->isAuthenticated()) {
+    // First we attach our asset library to the page.
+    $page['#attached']['library'][] = 'eg/friendly-greeting';
+    // Then we pass along our dynamic value.
+    // This will then be available in our JavaScript as drupalSettings.friendly.name.
+    $page['#attached']['drupalSettings']['friendly']['name'] = $account->getDisplayName();;
+  }
+}

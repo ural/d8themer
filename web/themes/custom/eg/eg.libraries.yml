@@ -13,7 +13,6 @@ eg-assets:
       css/components/search.css: {}
   js:
       js/scripts.js: {}
-      js/friendly-greeting.js: {}
 
 quicksand:
   license:
@@ -23,3 +22,11 @@ quicksand:
     theme:
       //fonts.googleapis.com/css?family=Quicksand: {  type: external }
       css/base/styles.css: {}
+
+friendly-greeting:
+  version: 1.0
+  license: GPL
+  js:
+      js/friendly-greeting.js: {}
+  dependencies:
+    - core/drupalSettings

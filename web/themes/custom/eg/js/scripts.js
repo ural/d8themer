@@ -1,7 +1,7 @@
 /*
 **
 * @file
-* custom Javascript for ninesixtyrobots theme.
+* custom Javascript for theme.
 */
 
 

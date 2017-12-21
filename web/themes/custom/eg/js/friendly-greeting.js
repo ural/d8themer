@@ -1,4 +1,4 @@
-(function (Drupal) {
+(function ($, Drupal) {
   // Override the default implementation of Drupal.theme.placeholder with our
   // own custom one.
   Drupal.theme.placeholder = function(str) {
@@ -9,9 +9,9 @@
   // site name with a greeting.
   if (drupalSettings.friendly.name) {
     //var siteName = document.getElementsByClassName('site-name')[0];
-    var siteLogo = $(".site-logo");
-    siteLogo.append('<h1>Howdy, ' + Drupal.theme('placeholder', drupalSettings.friendly.name) + '!</h1>');
+    var siteLogo = $("#block-eg-branding");
+    siteLogo.append('<h4 class="howdy">Howdy, ' + Drupal.theme('placeholder', drupalSettings.friendly.name) + '!</h4>');
     //siteName.getElementsByTagName('a')[0].innerHTML = '<h1>Howdy, ' + Drupal.theme('placeholder', drupalSettings.friendly.name) + '!</h1>';
   }
 
-})(Drupal);
+})(jQuery, Drupal);
