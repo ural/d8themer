@@ -29,5 +29,5 @@ friendly-greeting:
   js:
       js/friendly-greeting.js: {}
   dependencies:
-      - core/drupalSettings
-      - core/jquery
+    - core/drupalSettings
+    - core/jquery
