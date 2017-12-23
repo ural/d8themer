@@ -1,4 +1,5 @@
 (function ($, Drupal) {
+  'use strict';
   // Override the default implementation of Drupal.theme.placeholder with our
   // own custom one.
   Drupal.theme.placeholder = function(str) {

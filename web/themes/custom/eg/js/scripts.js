@@ -6,6 +6,7 @@
 
 
 (function ($) {
+  'use strict';
 
   Drupal.behaviors.testScript = {
     attach: function (context, settings) {
