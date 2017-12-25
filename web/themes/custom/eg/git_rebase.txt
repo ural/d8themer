@@ -2,4 +2,6 @@ Git Rebase
 
 With git-rebase you can push local commits together into one commit (without force). With rebase, you can commit more often and then merge your commits together before pushing back to the shared repo. For simplicity, we are only going to talk about rebasing locally. This is a little more complicated to explain, so it is easier to just show a simple example.
 
-removed sencond paragraph from git_rebase
+you can created a text file called "git-article.txt" and committed this new file. Then you can add some new text to this file and made a new commit. Use git add -p, which shows your change. Use the command y to accept this change and committed this change to the git local history. As of right now, both commits touch the same file and really, You only need one commit to represent the changes. You can then use
+
+to see both commits. Pick one commit and use command f to amend changes but discard the commit's log message. Save these changes. Then you can us git log to show recent commits. This leaves a much cleaner history. Rebasing is useful if you forgot to add something to your first commit.
