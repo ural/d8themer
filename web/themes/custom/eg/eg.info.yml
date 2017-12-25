@@ -9,7 +9,7 @@ screenshot: emily-didonato-2016.jpg
 libraries:
  - eg/eg-assets
  - eg/quicksand
- - eg/friendly-greeting
+ #- eg/friendly-greeting
 
 regions:
   header: Header
