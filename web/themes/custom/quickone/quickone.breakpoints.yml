@@ -1,0 +1,18 @@
+quickone.mobile:
+  label: mobile
+  mediaQuery: ''
+  weight: 1
+  multipliers:
+    - 1x
+quickone.narrow:
+  label: narrow
+  mediaQuery: 'all and (mid-width: 860px) and (max-width: 1246px)'
+  weight: 1
+  multipliers:
+    - 1x
+quickone.wide:
+  label: wide
+  mediaQuery: 'all and (min-width: 1291px)'
+  weight: 1
+  multipliers:
+    - 1x
