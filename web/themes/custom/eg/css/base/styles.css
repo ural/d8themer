@@ -53,3 +53,8 @@ blockquote {
   font-style: italic;
   margin: 10px 0;
 }
+
+.node__content marquee {
+  background: #09f;
+  color: #fff;
+}

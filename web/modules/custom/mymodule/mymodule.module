@@ -11,3 +11,20 @@ function mymodule_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
     $form['actions']['submit']['#value'] = t('Comment');
   }
 }
+
+/**
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ * Implements hook_entity_view
+ */
+
+function mymodule_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+    if ($entity->getEntityType()->id() === 'node') {
+      $build['awesome'] = [
+        '#markup' => '<marquee style="background: #09f;"> This is awesome. </marquee>',
+        '#allowed_tags' => ['marquee'],
+      ];
+    }
+}
