@@ -1,13 +1,21 @@
 <?php
+
 /**
- * Implefmentation of hook_form_alter
+ * @file
  */
 
 /**
  * Implements hook_form_alter().
  */
-function mymodule_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  if($form_id == 'comment_comment_form') {
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ *
+ */
+function mymodule_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'comment_comment_form') {
     $form['actions']['submit']['#value'] = t('Comment');
   }
 }
@@ -17,14 +25,13 @@ function mymodule_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
  * @param \Drupal\Core\Entity\EntityInterface $entity
  * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
  * @param $view_mode
- * Implements hook_entity_view
+ *   Implements hook_entity_view
  */
-
-function mymodule_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
-    if ($entity->getEntityType()->id() === 'node') {
-      $build['awesome'] = [
-        '#markup' => '<marquee style="background: #09f;"> This is awesome. </marquee>',
-        '#allowed_tags' => ['marquee'],
-      ];
-    }
+function mymodule_entity_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  if ($entity->getEntityType()->id() === 'node') {
+    $build['awesome'] = [
+      '#markup' => '<marquee style="background: #09f;"> This is awesome. </marquee>',
+      '#allowed_tags' => ['marquee'],
+    ];
+  }
 }
