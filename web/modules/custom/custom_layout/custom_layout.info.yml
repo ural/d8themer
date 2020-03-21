@@ -1,0 +1,7 @@
+name: 'Custom Layout'
+type: module
+description: 'Provides a way for building layout'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - layout_builder:layout_builder
